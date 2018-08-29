@@ -1,11 +1,10 @@
 browser.webRequest.onHeadersReceived.addListener(
 	function(d) {
 		if (!d.responseHeaders) return;
-		let headers = d.responseHeaders;
 		let newHeaders = [];
-		for (let i in headers) {
-			if (headers[i].name.toLowerCase() !== 'etag') {
-				newHeaders.push(headers[i]);
+		for (var i in d.responseHeaders) {
+			if (d.responseHeaders[i].name.toLowerCase() !== 'etag') {
+				newHeaders.push(d.responseHeaders[i]);
 			}
 		}
 		return {responseHeaders: newHeaders};
