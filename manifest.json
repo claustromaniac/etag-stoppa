@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "ETag Stoppa",
 	"description": "Prevents Firefox from storing entity tags by removing ETag response headers unconditionally and without exceptions.",
-	"version": "0.2",
+	"version": "0.3",
 	"applications": {
 		"gecko": {
 			"id": "etag-stoppa@cm.org",
