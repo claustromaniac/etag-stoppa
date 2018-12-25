@@ -1,24 +1,26 @@
 {
-	"manifest_version": 2,
-	"name": "ETag Stoppa",
-	"description": "Prevents Firefox from storing entity tags by removing ETag response headers unconditionally and without exceptions.",
-	"version": "0.3",
 	"applications": {
 		"gecko": {
 			"id": "etag-stoppa@cm.org",
 			"strict_min_version": "52.0"
 		}
 	},
+	"author": "claustromaniac",
+	"background": {
+		"scripts": [ "etag-stoppa.js" ]
+	},
+	"description": "Prevents Firefox from storing entity tags by removing ETag response headers unconditionally and without exceptions.",
+	"homepage_url": "https://github.com/claustromaniac/etag-stoppa",
     "icons": {
          "32": "icons/etag32.png",
          "64": "icons/etag64.png"
     },
+	"manifest_version": 2,
+	"name": "ETag Stoppa",
 	"permissions": [
 		"webRequest",
 		"webRequestBlocking",
 		"<all_urls>"
 	],
-	"background": {
-		"scripts": [ "etag-stoppa.js" ]
-	}
+	"version": "0.4"
 }
